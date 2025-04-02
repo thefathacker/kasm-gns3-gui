@@ -13,7 +13,7 @@ WORKDIR $HOME
 # GNS3 https://docs.gns3.com/docs/getting-started/installation/linux/
 RUN add-apt-repository ppa:gns3/ppa
 RUN apt update
-RUN apt install gns3-gui
+RUN apt install gns3-gui -y
 
 
 ######### End Customizations ###########
