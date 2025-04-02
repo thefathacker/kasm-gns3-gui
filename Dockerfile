@@ -17,6 +17,8 @@ RUN add-apt-repository ppa:gns3/ppa \
     && chmod +x $HOME/Desktop/gns3.desktop \
     && chown 1000:1000 $HOME/Desktop/gns3.desktop
 
+RUN echo "/usr/bin/desktop_ready && /usr/bin/gns3 &" > $STARTUPDIR/custom_startup.sh \
+    && chmod +x $STARTUPDIR/custom_startup.sh
 
 ######### End Customizations ###########
 
