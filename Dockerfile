@@ -11,9 +11,11 @@ WORKDIR $HOME
 ######### Customize Container Here ###########
 
 # GNS3 https://docs.gns3.com/docs/getting-started/installation/linux/
-RUN add-apt-repository ppa:gns3/ppa
-RUN apt update
-RUN apt install gns3-gui -y
+RUN add-apt-repository ppa:gns3/ppa \
+    && apt update && apt install gns3-gui -y \
+    && cp /usr/share/applications/gns3.desktop $HOME/Desktop/ \
+    && chmod +x $HOME/Desktop/gns3.desktop \
+    && chown 1000:1000 $HOME/Desktop/gns3.desktop
 
 
 ######### End Customizations ###########
