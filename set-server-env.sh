@@ -1,19 +1,19 @@
 
 # HOSTNAME VAR
 if [ -z "${GNS3_HOST}" ]; then
-  GNS3_HOST = 'gns3vm'
+  GNS3_HOST='gns3vm'
 fi
 
 if [ -z "${GNS3_USER}" ]; then
-  GNS3_USER = 'gns3'
+  GNS3_USER='gns3'
 fi
 
 if [ -z "${GNS3_PASS}" ]; then
-  GNS3_USER = 'gns3'
+  GNS3_USER='gns3'
 fi
 
 if [ -z "${GNS3_PORT}" ]; then
-  GNS3_PORT = 80
+  GNS3_PORT='80'
 fi
 
 cat > /home/kasm-user/.config/GNS3/2.2/gns3_server.conf << EOF
