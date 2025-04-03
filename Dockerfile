@@ -1,7 +1,7 @@
 # SOURCE DOCUMENTAION: https://www.kasmweb.com/docs/latest/how_to/building_images.html
 
 #FROM kasmweb/core-ubuntu-noble:develop
-FROM kasmweb/ubuntu-noble-deskop:develop
+FROM kasmweb/ubuntu-noble-desktop:develop
 USER root
 
 ENV HOME=/home/kasm-default-profile
