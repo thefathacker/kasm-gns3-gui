@@ -38,7 +38,7 @@ protocol = http
 console_start_port_range = 5000
 console_end_port_range = 10000
 udp_start_port_range = 10000
-udp_end_port_range = 20000' 
+udp_end_port_range = 20000
 EOF
 
 chown 1000:0 /home/kasm-user/.config/GNS3/2.2/gns3_server.conf
