@@ -21,7 +21,7 @@ RUN add-apt-repository ppa:gns3/ppa \
     && chown 1000:1000 $HOME/Desktop/gns3.desktop
 
 RUN add-apt-repository ppa:wireshark-dev/stable \
-    && apt update && apt install wireshark
+    && apt update && apt install wireshark -y
 
 COPY set-server-env.sh /usr/bin/set-server-env.sh
 
