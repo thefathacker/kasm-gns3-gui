@@ -1,7 +1,7 @@
 # SOURCE DOCUMENTAION: https://www.kasmweb.com/docs/latest/how_to/building_images.html
 
-#FROM kasmweb/core-ubuntu-noble:develop
-FROM kasmweb/ubuntu-noble-desktop:develop
+FROM kasmweb/core-ubuntu-noble:develop
+# FROM kasmweb/ubuntu-noble-desktop:develop
 USER root
 
 ENV HOME=/home/kasm-default-profile
@@ -19,6 +19,9 @@ RUN add-apt-repository ppa:gns3/ppa \
     && cp /usr/share/applications/gns3.desktop $HOME/Desktop/ \
     && chmod +x $HOME/Desktop/gns3.desktop \
     && chown 1000:1000 $HOME/Desktop/gns3.desktop
+
+RUN add-apt-repository ppa:wireshark-dev/stable \
+    && apt update && apt install wireshark
 
 COPY set-server-env.sh /usr/bin/set-server-env.sh
 
