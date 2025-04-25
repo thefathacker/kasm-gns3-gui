@@ -15,7 +15,7 @@ WORKDIR $HOME
 # GNS3 https://docs.gns3.com/docs/getting-started/installation/linux/
 RUN add-apt-repository ppa:gns3/ppa \
     && apt update && apt upgrade -y \
-    && apt install gns3-gui telnet neofetch unzip nano virt-viewer -y \
+    && apt install gns3-gui telnet neofetch unzip nano virt-viewer vncviewer -y \
     && cp /usr/share/applications/gns3.desktop $HOME/Desktop/ \
     && chmod +x $HOME/Desktop/gns3.desktop \
     && chown 1000:1000 $HOME/Desktop/gns3.desktop
