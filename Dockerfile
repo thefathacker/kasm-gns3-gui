@@ -32,7 +32,7 @@ RUN mkdir -p $GNS3_CONF_PATH
 COPY gns3_controller.conf $GNS3_CONF_PATH/gns3_controller.conf
 COPY gns3_gui.conf $GNS3_CONF_PATH/gns3_gui.conf
 
-RUN echo "/usr/bin/desktop_ready && /usr/bin/set-server-env.sh && /usr/bin/gns3 &" > $STARTUPDIR/custom_startup.sh \
+RUN echo "/usr/bin/desktop_ready && /usr/bin/set-server-env.sh && /usr/bin/gns3.desktop &" > $STARTUPDIR/custom_startup.sh \
     && chmod +x $STARTUPDIR/custom_startup.sh
 
 ######### End Customizations ###########
