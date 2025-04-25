@@ -1,0 +1,1 @@
+docker build -t kasm-gns3-gui:develop -f Dockerfile .
